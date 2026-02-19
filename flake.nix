@@ -73,7 +73,7 @@
     };
   in
   {
-    darwinConfigurations."tu-nombre-de-usuario" = darwin.lib.darwinSystem {
+    darwinConfigurations."andrecarbajalvargas" = darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
   };
