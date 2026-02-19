@@ -39,8 +39,8 @@
         onActivation.cleanup = "zap";
         
         casks = [
-	  "warp"
-	  "tailscale"
+          "warp"
+          "tailscale"
           "docker"
           "ytmdesktop-youtube-music"
         ];
@@ -48,6 +48,17 @@
         masApps = {
           "WhatsApp" = 310633997;
           "Xcode" = 497799835;
+          "Word" = 462054704;
+          "Excel" = 462058435;
+          "PowerPoint" = 462062816;
+          "OneDrive" = 823766827;
+          "Teams" = 1113153706;
+          "Bitwarden" = 1352778147;
+          "FolderPreview" = 6698876601;
+          "DaVinci Resolve" = 571213070;
+          "Telegram" = 747648890;
+          "Termius" = 1176074088;
+          "The Unarchiver" = 425424353;
         };
 
         # Si prefieres mantener nvm y sdkman por ahora vía brew
