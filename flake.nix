@@ -17,7 +17,7 @@
         bun
         deno
         go
-        golang-migrate
+        go-migrate
         uv
         
         # Herramientas CLI que ya usas
@@ -40,14 +40,13 @@
         
         casks = [
 	  "warp"
-	  "mos"
 	  "tailscale"
-	  "youtube-music" 
-          "docker" 
+          "docker"
+          "ytmdesktop-youtube-music"
         ];
 
         # Si prefieres mantener nvm y sdkman por ahora vía brew
-        brews = [ "nvm" ];
+        brews = [ "nvm" "gemini-cli" ];
       };
 
       # 3. Configuraciones de macOS (System Defaults)
@@ -64,7 +63,8 @@
       };
 
       # 4. Configuracion del Sistema Nix
-      services.nix-daemon.enable = true;
+      system.primaryUser = "andrecarbajalvargas";
+      nix.enable = false;
       nix.settings.experimental-features = "nix-command flakes";
       system.stateVersion = 4;
 
