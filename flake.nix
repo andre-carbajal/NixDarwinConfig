@@ -61,7 +61,6 @@
           "The Unarchiver" = 425424353;
         };
 
-        # Si prefieres mantener nvm y sdkman por ahora vía brew
         brews = [ "nvm" "gemini-cli" ];
       };
 
@@ -69,12 +68,12 @@
       system.defaults = {
         dock = {
           autohide = true;
-          show-recents = false; # Limpia un poco el Dock
+          show-recents = false;
         };
         finder = {
           AppleShowAllExtensions = true;
           AppleShowAllFiles = true;
-          FXPreferredViewStyle = "clmv"; # Vista de columnas, muy útil en ingeniería
+          FXPreferredViewStyle = "clmv";
         };
       };
 
