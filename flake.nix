@@ -45,6 +45,11 @@
           "ytmdesktop-youtube-music"
         ];
 
+        masApps = {
+          "WhatsApp" = 310633997;
+          "Xcode" = 497799835;
+        };
+
         # Si prefieres mantener nvm y sdkman por ahora vía brew
         brews = [ "nvm" "gemini-cli" ];
       };
