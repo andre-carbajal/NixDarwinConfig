@@ -47,7 +47,7 @@
         ];
 
         # Si prefieres mantener nvm y sdkman por ahora vía brew
-        brews = [ "nvm", "sdkman-cli" ];
+        brews = [ "nvm" ];
       };
 
       # 3. Configuraciones de macOS (System Defaults)
