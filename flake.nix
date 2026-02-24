@@ -9,7 +9,10 @@
 
   outputs = inputs@{ self, nixpkgs, darwin, ... }:
   let
-    configuration = { pkgs, ... }: {
+    configuration = { config, pkgs, lib, ... }:
+    let
+      isVM = builtins.match ".*([Vv]irtual|[Vv]m|VM).*" config.networking.hostName != null;
+    in {
       
       # 1. Paquetes del Sistema (Binarios de Nix)
       environment.systemPackages = with pkgs; [
@@ -43,28 +46,9 @@
           "tailscale"
           "docker"
           "ytmdesktop-youtube-music"
-          "affinity"
-          "antigravity"
-          "cleanmymac"
-          "discord"
-          "hytale"
-          "kiro"
-          "lunar-client"
-          "macs-fan-control"
-          "microsoft-edge"
-          "minecraft"
-          "obs"
-          "prismlauncher"
-          "raycast"
-          "rectangle"
-          "roblox"
-          "steam"
-          "utm"
-          "virtualbuddy"
-          "zerotier-one"
         ];
 
-        masApps = {
+        masApps = lib.mkIf (!isVM) {
           "WhatsApp" = 310633997;
           "Xcode" = 497799835;
           "Word" = 462054704;
